@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Skewed Background</title>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			background: #262626;
+		}
+		#skewedTop{
+			background: #edff57;
+			padding: 100px 0;
+			transform: skew(0deg, -10deg) translateY(-120px);
+		}
+		.container{
+			padding: 150px 200px;
+			transform: skew(0deg, 10deg) ;
+			font-family: Arial, sans-serif;
+		}
+		.container h1{
+			margin: 0;
+			padding: 20px 0;
+			font-size: 3em;
+		}
+		.container p{
+			font-size: 1em;
+			margin: 0;
+			padding: 0;
+			line-height: 1.5em;
+			width: 80%;
+		}
+		#skewedBottom{
+			padding: 0 200px 150px;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			text-align: right;
+		}
+		#skewedBottom h1{
+			margin: 0;
+			padding: 20px 0;
+			font-size: 3em;
+		}
+		#skewedBottom p{
+			font-size: 1em;
+			margin: 0;
+			padding: 0;
+			line-height: 1.5em;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<section id="skewedTop">
+		<div class="container">
+			<h1>Online Tutorial</h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque at deserunt molestias, vel quod non asperiores necessitatibus tempore iusto laboriosam maxime dolor, labore eum ea nisi repellendus assumenda, architecto. Dicta facilis laborum nobis provident veniam cumque unde, officia, mollitia repudiandae natus labore dolore, rem!</p>
+		</div>
+	</section>
+	<section id="skewedBottom">
+			<h1>Please Subscribe</h1>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit praesentium aliquid, libero voluptas incidunt, soluta saepe nisi ad repellat rem numquam dolor facere officiis aut ullam sequi excepturi rerum, ipsa!</p>
+	</section>
+</body>
+</html>
