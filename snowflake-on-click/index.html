@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Snowflake On Click</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			height: 100vh;
+			background: linear-gradient(#12a7f9, #008aef);
+			overflow: hidden;
+		}
+		.snowflake{			
+			position: absolute;
+			background-image: url('snowflake.svg');
+			background-size: cover;
+			border-radius: 50px;
+			animation: fall 2s linear infinite;
+		}
+		@keyframes fall{
+			0%{
+				transform: translate(50%, 50%);
+				opacity: 1;
+			}
+			100%{
+				transform: translate(50%, 1000%);
+				opacity: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	
+	<script>
+		document.addEventListener('click', (e) => {
+			// create span for snowflake
+			var snowflake = document.createElement('span');
+			snowflake.classList.add('snowflake');
+
+			// set position of snowflake to mouse pointer
+			snowflake.style.left = e.offsetX + 'px';
+			snowflake.style.top = e.offsetY + 'px';
+
+			// select random number between 20 and 100
+			var size = Math.random() * (100 - 20 + 1) + 20;
+
+			// set width and height
+			snowflake.style.width = size + 'px';
+			snowflake.style.height = size + 'px';
+
+			document.body.appendChild(snowflake);
+			setTimeout(() => {
+				snowflake.remove();
+			}, 1000);
+		});
+	</script>
+</body>
+</html>
